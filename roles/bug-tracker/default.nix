@@ -133,15 +133,6 @@ in {
           # Allow common "keeping the internet working" routes (well-known, favicon, robots.txt)
           - import: (data)/common/keep-internet-working.yaml
 
-
-          - name: account-creation
-            path_regex: ^/account/register
-            action: CHALLENGE
-
-          - name: login
-            path_regex: ^/login
-            action: CHALLENGE
-
           # Generic catchall rule
           - name: generic-browser
             user_agent_regex: >-
