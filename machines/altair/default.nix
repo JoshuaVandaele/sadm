@@ -12,6 +12,8 @@ in {
     ./postgres.nix
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [ "docker-28.5.2" ];
+
   services.openssh.enable = true;
   services.openssh.settings.PermitRootLogin = "prohibit-password";
   users.users.root.openssh.authorizedKeys.keys = [
