@@ -123,17 +123,16 @@ in {
           - import: (data)/bots/_deny-pathological.yaml
           - import: (data)/bots/aggressive-brazilian-scrapers.yaml
 
+          # Blocks all AI/LLM bots used for training or unknown/undocumented purposes.
+          # Permits user agents with explicitly documented non-training use, and published IP allowlists.
+          - import: (data)/meta/ai-block-moderate.yaml
+
           # Search engine crawlers to allow
           - import: (data)/crawlers/_allow-good.yaml
 
           # Allow common "keeping the internet working" routes (well-known, favicon, robots.txt)
           - import: (data)/common/keep-internet-working.yaml
 
-          # Bots triggered by user-initiated actions
-          - name: user-triggered-bots
-            user_agent_regex: >-
-              (?:ChatGPT-User|Claude-Web|OAI-SearchBot|Perplexity-User|Applebot)
-            action: ALLOW
 
           - name: account-creation
             path_regex: ^/account/register
