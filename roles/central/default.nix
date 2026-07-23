@@ -76,8 +76,8 @@ let
       rebuild_command = "@dolphin-emu-bot rebuild";
       
       required_commits = {
-        # Merge commit for PR 13881: "FloatUtils: Replace quieting SNaNs via `0.0 + x` with MakeQuiet"
-        "dolphin-emu/dolphin" = "52806b3dc82954bf222166d5870e0d8825c977d9";
+        # Merge commit for PR 14748: "BuildMacOSUniversalBinary: Add flag to enable CCache"
+        "dolphin-emu/dolphin" = "e2013caea0abc4224ccf5152a7de11c0d7bf3dbe";
       };
     };
 
