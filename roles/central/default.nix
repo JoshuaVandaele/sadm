@@ -76,8 +76,8 @@ let
       rebuild_command = "@dolphin-emu-bot rebuild";
       
       required_commits = {
-        # Merge commit for PR 14748: "BuildMacOSUniversalBinary: Add flag to enable CCache"
-        "dolphin-emu/dolphin" = "e2013caea0abc4224ccf5152a7de11c0d7bf3dbe";
+        # Merge commit for PR 14475: "CMake: Replace the Visual Studio project"
+        "dolphin-emu/dolphin" = "707d3c7a732634ad8d522bd27e52b075f54ac4f3";
       };
     };
 
