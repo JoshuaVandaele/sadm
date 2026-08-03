@@ -1,4 +1,4 @@
-FROM debian:bookworm-backports
+FROM debian:trixie-backports
 
 RUN apt update
 
@@ -28,6 +28,6 @@ RUN buildbot-worker create-worker \
   sed -i "s/'WORKER_NAME'/os.environ.pop('WORKER_NAME')/" /buildbot/buildbot.tac && \
   sed -i "s/'WORKER_PASSWORD'/os.environ.pop('WORKER_PASSWORD')/" /buildbot/buildbot.tac
 RUN echo 'OatmealDome <oatmeal@dolphin-emu.org>' > /buildbot/info/admin
-RUN echo 'Debian 12 (Bookworm) build container' > /buildbot/info/host
+RUN echo 'Debian 13 (trixie) build container' > /buildbot/info/host
 
 ENTRYPOINT cd /buildbot && exec buildbot-worker start --nodaemon
