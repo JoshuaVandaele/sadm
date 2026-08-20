@@ -28,6 +28,7 @@ let
     "buildbot-flat-manager-worker-token.age"
     "buildbot-gh-client-id.age"
     "buildbot-gh-client-secret.age"
+    "buildbot-mac-keychain-password.age"
     "buildbot-steam-username.age"
     "buildbot-steam-password.age"
     "buildbot-workers-passwords.age"

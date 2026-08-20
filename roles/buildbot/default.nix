@@ -64,6 +64,7 @@ in {
     age.secrets.buildbot-flat-manager-worker-token = buildbotSecret ../../secrets/buildbot-flat-manager-worker-token.age;
     age.secrets.buildbot-gh-client-id = buildbotSecret ../../secrets/buildbot-gh-client-id.age;
     age.secrets.buildbot-gh-client-secret = buildbotSecret ../../secrets/buildbot-gh-client-secret.age;
+    age.secrets.buildbot-mac-keychain-password = buildbotSecret ../../secrets/buildbot-mac-keychain-password.age;
     age.secrets.buildbot-steam-username = buildbotSecret ../../secrets/buildbot-steam-username.age;
     age.secrets.buildbot-steam-password = buildbotSecret ../../secrets/buildbot-steam-password.age;
     age.secrets.buildbot-workers-passwords = buildbotSecret ../../secrets/buildbot-workers-passwords.age;
@@ -123,6 +124,7 @@ in {
         GH_CLIENT_SECRET_PATH = config.age.secrets.buildbot-gh-client-secret.path;
         STEAM_ACCOUNT_USERNAME_PATH = config.age.secrets.buildbot-steam-username.path;
         STEAM_ACCOUNT_PASSWORD_PATH = config.age.secrets.buildbot-steam-password.path;
+        MAC_KEYCHAIN_PASSWORD = config.age.secrets.buildbot-mac-keychain-password.path;
         UPDATE_SIGNING_KEY_PATH = config.age.secrets.update-signing-key.path;
         WORKERS_PASSWORDS_PATH = config.age.secrets.buildbot-workers-passwords.path;
         FLATPAK_LINTER_EXCEPTIONS_PATH = "${buildbotScripts}/lib/flatpak_linter_exceptions.json";
