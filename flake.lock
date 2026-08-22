@@ -112,11 +112,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787194017,
-        "narHash": "sha256-6Oa9hseVC+nPEFySN8NgvWX8rK+T38a3HYj0/S/Wx1c=",
+        "lastModified": 1787290492,
+        "narHash": "sha256-PpdcVXn1UY09ePtgAFt+Atu1gcxkiBatt2agv/rSkDE=",
         "owner": "dolphin-emu",
         "repo": "chat-bridge",
-        "rev": "7a6d20f89a9493f1e875792665617f92f82b2ddf",
+        "rev": "dee6673811c39318e0b4f1cd5618bbb04ccf8e9b",
         "type": "github"
       },
       "original": {
