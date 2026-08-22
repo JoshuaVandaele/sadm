@@ -9,7 +9,21 @@ in {
   options.my.roles.analytics.enable = lib.mkEnableOption "analytics ingest server";
 
   config = lib.mkIf cfg.enable {
-    services.clickhouse.enable = true;
+    services.clickhouse = {
+      enable = true;
+
+      serverConfig = {
+        query_log.ttl = "event_date + INTERVAL 30 DAY DELETE";
+        query_thread_log.ttl = "event_date + INTERVAL 14 DAY DELETE";
+        query_views_log.ttl = "event_date + INTERVAL 14 DAY DELETE";
+        trace_log.ttl = "event_date + INTERVAL 7 DAY DELETE";
+        part_log.ttl = "event_date + INTERVAL 30 DAY DELETE";
+        text_log.ttl = "event_date + INTERVAL 14 DAY DELETE";
+        metric_log.ttl = "event_date + INTERVAL 14 DAY DELETE";
+        error_log.ttl = "event_date + INTERVAL 90 DAY DELETE";
+        asynchronous_metric_log.ttl = "event_date + INTERVAL 30 DAY DELETE";
+      };
+    };
 
     # Restart in case of crashes, hangs, etc.
     systemd.services.clickhouse.serviceConfig.Restart = "always";
